@@ -1,0 +1,132 @@
+/* The menu icon */
+.menubutton {
+    display: grid;
+    cursor: pointer;
+  }
+  
+
+  .bar1 {
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 40px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.5s;
+  }
+
+  .bar2{
+    grid-column: 1;
+    grid-row: 2;
+    width: 40px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.5s;
+  }
+
+  .bar3{
+    grid-column: 1;
+    grid-row: 2;
+    width: 40px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.5s;
+  }
+
+  .bar4 {
+    grid-column: 1;
+    grid-row: 3;
+
+    width: 40px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.5s;
+  }
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 17px) rotate(-45deg);
+  }
+  
+  /* Rotate the second bar */
+  .change .bar2 {
+    transform: translate(0, 0) rotate(-45deg);
+  }
+  
+  /* Rotate the third bar*/
+  .change .bar3 {
+    transform: translate(0, 0) rotate(45deg);
+  }
+
+  /* Rotate the fourth bar*/
+  .change .bar4 {
+    transform: translate(0, -17px) rotate(45deg);
+  }
+
+
+/* The nav menu based on the one from https://www.w3schools.com/howto/howto_js_sidenav.asp */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 50px; /* 50 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .menubutton {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 36px;
+    margin-left: 5px;
+  }
+  /* Moving the links out of display when not open */
+  .sidenav .links {
+    position: relative;
+    left: -125px;
+    transition: 0.53s;
+  }
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 0px;
+    margin-left: 50px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.displayframe {
+    height: 100%;
+    width: 97vw;
+    border:none;
+    overflow: hidden;
+    /* background-color: #111; */
+}
