@@ -1,3 +1,5 @@
 .images {
-    display: block;
+    display: inline;
+    height: 5000px;
+    width: 5px;
 }

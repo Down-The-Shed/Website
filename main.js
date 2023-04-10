@@ -21,10 +21,21 @@ function toggleNav() {
         document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
     } 
 }
+function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
 
 function UpdateIFrame(){
-    // Selecting the iframe element
-    var iframe = document.getElementById("displayFrame");
-    // Adjusting the iframe height
-    iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
+    //Close the menu
+    document.getElementById("menubtn").classList.toggle('change');
+    toggleNav()
+
+    sleep(500).then(() => {
+        // Do something after the sleep!
+    
+        // Selecting the iframe element
+        var iframe = document.getElementById("displayFrame");
+        // Adjusting the iframe height
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
+    });
 }
