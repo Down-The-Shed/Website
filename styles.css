@@ -46,6 +46,47 @@
     margin: 6px 0;
     transition: 0.5s;
   }
+  .SmallScreen .bar1 {
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 80px;
+    height: 10px;
+    background-color: #333;
+    margin: 12px 0;
+    transition: 0.5s;
+  }
+
+  .SmallScreen .bar2{
+    grid-column: 1;
+    grid-row: 2;
+    width: 80px;
+    height: 10px;
+    background-color: #333;
+    margin: 12px 0;
+    transition: 0.5s;
+  }
+
+  .SmallScreen .bar3{
+    grid-column: 1;
+    grid-row: 2;
+    width: 80px;
+    height: 10px;
+    background-color: #333;
+    margin: 12px 0;
+    transition: 0.5s;
+  }
+
+  .SmallScreen .bar4 {
+    grid-column: 1;
+    grid-row: 3;
+
+    width: 80px;
+    height: 10px;
+    background-color: #333;
+    margin: 12px 0;
+    transition: 0.5s;
+  }
   /* Rotate first bar */
   .change .bar1 {
     transform: translate(0, 17px) rotate(-45deg);
@@ -64,6 +105,17 @@
   /* Rotate the fourth bar*/
   .change .bar4 {
     transform: translate(0, -17px) rotate(45deg);
+  }
+
+
+  /* Rotate first bar */
+  .SmallScreen.change .bar1 {
+    transform: translate(0, 34px) rotate(-45deg);
+  }
+  
+  /* Rotate the fourth bar*/
+  .SmallScreen.change .bar4 {
+    transform: translate(0, -34px) rotate(45deg);
   }
 
 
@@ -86,6 +138,15 @@
     padding: 8px 8px 8px;
     text-decoration: none;
     font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav.SmallScreen  a {
+    padding: 16px 16px 16px;
+    text-decoration: none;
+    font-size: 50px;
     color: #818181;
     display: block;
     transition: 0.3s;
@@ -117,11 +178,6 @@
     margin-left: 50px;
   }
   
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
 
 .displayframe {
     height: 2500px;
