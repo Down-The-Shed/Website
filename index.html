@@ -1,34 +1,37 @@
-<!-- The main page which has the side bar and uses I-Frames to display the other pages. -->
+<!-- the home page that is displayed as an I-Frame in index.html -->
 <!DOCTYPE html>
 <html>
 
 <head>
-  <link rel="stylesheet" href="styles.css">
-  <script src="main.js"></script>
+    <link rel="stylesheet" href="sidebarStyles.css">
+    <script src="sidebar.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
-<!-- the side navigation bar -->
-<div id="SideNavigation" class="sidenav">
-    <div class="menubutton" id="menubtn" onclick="toggleMenuBtn(this);toggleNav();">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-        <div class="bar4"></div>
-      </div>
-    <div id="Links" class="links">
-        <a href="home.html" onclick="UpdateIFrame()" target="displayframe">Home</a>
-        <a href="gallery.html" onclick="UpdateIFrame()" target="displayframe">Gallery</a>
-        <a href="about.html" onclick="UpdateIFrame()" target="displayframe">About</a>
-        <a href="contact.html" onclick="UpdateIFrame()" target="displayframe">Contact</a>
-    </div>
-  </div>
-  
-  <!-- Main Page stuff that gets pushed to the side -->
-  <div id="main">
-    <iframe src="home.html" class="displayframe" name= "displayframe" id="displayframe" title="Main Page" scrolling="no"></iframe>
-  </div>
+    <body>
+        <!-- The sidebar navigation menu -->
+        <div id="SideNavigation" class="sidenav">
+            <div class="menubutton" id="menubtn" onclick="toggleMenuBtn(this);toggleNav();">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <div class="bar4"></div>
+              </div>
+            <div id="Links" class="links">
+                <a href="index.html" onclick="UpdateIFrame()" target="_top">Home</a>
+                <a href="gallery.html" onclick="UpdateIFrame()" target="_top">Gallery</a>
+                <a href="about.html" onclick="UpdateIFrame()" target="_top">About</a>
+                <a href="contact.html" onclick="UpdateIFrame()" target="_top">Contact</a>
+            </div>
+          </div>
 
-</body>
+        <div id="main">
+            <h2>Welcome down the shed</h2>
+            <br>
+            <!-- This is some very long text that is used as a placeholder to see if the scroll bar will show up when really long text is displayed in the I frame, this is to see if i need to somehow make word wrapping work or if i can get away with just making sure that the page will fit into the I frame, there is also the issue of the border around it that i need to get rid of. It seems that as long as it isnt the same word then it wraps nicely however the I frame changes size when the side nav opens and it squishes the page rather than pushing it to the side which i do not like so now i need to fix this issue. -->
+            <p>Here I make all sorts of things using self taught skills I have learnt from the internet.</p>
+            <p>Ranging from woodworking to metal working using hand proccesses and computer powered tools.</p>
+        </div>
+    </body>
 
 </html>

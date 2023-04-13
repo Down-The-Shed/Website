@@ -3,7 +3,33 @@
 <html>
 
 <head>
-    Contact
+    <link rel="stylesheet" href="sidebarStyles.css">
+    <script src="sidebar.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
+<body>
+    <!-- The sidebar navigation menu -->
+    <div id="SideNavigation" class="sidenav">
+        <div class="menubutton" id="menubtn" onclick="toggleMenuBtn(this);toggleNav();">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div class="bar4"></div>
+        </div>
+        <div id="Links" class="links">
+            <a href="index.html" onclick="UpdateIFrame()" target="_top">Home</a>
+            <a href="gallery.html" onclick="UpdateIFrame()" target="_top">Gallery</a>
+            <a href="about.html" onclick="UpdateIFrame()" target="_top">About</a>
+            <a href="contact.html" onclick="UpdateIFrame()" target="_top">Contact</a>
+        </div>
+    </div>
+
+    <div id="main">
+        <h2>Contact</h2>
+        <p>To contact me you can email at: <a href="mailto:Down2TheShed@gmail.com">Down2TheShed@gmail.com</a></p>
+        <p>Or fill out the below form.</p>
+        <p style="text-align:center"><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfU6v0U-urOhQgj9hWWzwpWjSYUyVkntYlUS-J7d4VRF1_blg/viewform?embedded=true" width="640" height="950" frameborder="0" marginheight="0" marginwidth="auto">Loading…</iframe></p>    
+    </div>
+</body>
 </html>

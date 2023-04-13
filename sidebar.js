@@ -32,6 +32,10 @@ var sbClosedWidth = 50; //String(sbClosedWidth) + "px"
     });
   }
 
+function sleep (time) {
+return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 function toggleMenuBtn(x) {
     x.classList.toggle("change");
 }
@@ -49,29 +53,11 @@ function toggleNav() {
             sidenav.style.width = String(sbClosedWidth) + "px";
             main.style.marginLeft = String(sbClosedWidth) + "px";
             links.style.left = "-" + String(sbOpenWidth/2) + "px";
-            document.body.style.backgroundColor = "white";
+            document.body.style.backgroundColor = "#ADD1F7";
         } else { //open if is collapsed or on error
             sidenav.style.width = String(sbOpenWidth) + "px";
             main.style.marginLeft = String(sbOpenWidth) + "px";
             links.style.left = String(sbClosedWidth) + "px";
-            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            document.body.style.backgroundColor = "#596C80";
         } 
-}
-function sleep (time) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  }
-
-function UpdateIFrame(){
-    //Close the menu
-    document.getElementById("menubtn").classList.toggle('change');
-    toggleNav()
-
-    sleep(500).then(() => {
-        // Do something after the sleep!
-    
-        // Selecting the iframe element
-        var iframe = document.getElementById("displayframe");
-        // Adjusting the iframe height
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 10 + 'px';
-    });
 }
