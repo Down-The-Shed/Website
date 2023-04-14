@@ -7,12 +7,13 @@
     <script src="sidebar.js"></script>
 
     <link rel="stylesheet" href="galleryStyles.css">
-    <script src="gallery.js"></script>
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- Stuff for the scrolling display -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 
-<body onload="Loadimgs()">
+<body>
 
     <!-- The sidebar navigation menu -->
     <div id="SideNavigation" class="sidenav">
@@ -23,19 +24,105 @@
             <div class="bar4"></div>
         </div>
         <div id="Links" class="links">
-            <a href="index.html" onclick="UpdateIFrame()" target="_top">Home</a>
-            <a href="gallery.html" onclick="UpdateIFrame()" target="_top">Gallery</a>
-            <a href="about.html" onclick="UpdateIFrame()" target="_top">About</a>
-            <a href="contact.html" onclick="UpdateIFrame()" target="_top">Contact</a>
+            <a href="index.html" target="_top">Home</a>
+            <a href="gallery.html" target="_top">Gallery</a>
+            <a href="about.html" target="_top">About</a>
+            <a href="contact.html" target="_top">Contact</a>
         </div>
     </div>
     
     <div id="main">
-        <h2>The Gallery</h2>
-        <p>This is a gallery of some of my past works and current projects.</p>
+        <h2 style="margin:8px;">The Gallery</h2>
+        <p style="margin:8px;">This is a gallery of some of my past works and current projects.</p>
         
-        <div class="images" id="Images" >
+        <div>
+
+            <!-- first main picture bar -->
+            <div class="img-box">
+                <!-- Focus image -->
+                <img class="img" src="/images/woodworking/WalnutTray.jpg">
+                <!-- side text -->
+                <p class="img-text">
+                    <h2>Woodworking</h2>
+                    woodworking section
+                </p>
+            </div>
+            <!-- Image carousel thing -->
+            <div class="swiper s1">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/images/woodworking/PencilHolders.jpg"></div>
+                <div class="swiper-slide"><img src="/images/woodworking/HouseSign.jpg"></div>
+                <div class="swiper-slide"><img src="/images/woodworking/AlumInlayBox.jpg"></div>
+                <div class="swiper-slide"><img src="/images/woodworking/Mallet2.jpg"></div>
+                <div class="swiper-slide"><img src="/images/woodworking/ChristmasTreeDecor.jpg"></div>
+                <div class="swiper-slide"><img src="/images/woodworking/Mallet1.jpg"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <script>
+                const swiper1 = new Swiper('.s1', {slidesPerView: 5, spaceBetween: 30, navigation: {nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev"},});
+            </script>
+            <!-- end of section, copy paste from "first main picture bar" to add more-->
+
+            <!-- second main picture bar -->
+            <div class="img-box">
+                <!-- Focus image -->
+                <img class="img" src="/images/metalworking/BottleOpener.jpg">
+                <!-- side text -->
+                <p class="img-text">
+                    <h2>Metalworking</h2>
+                    metalworking section
+                </p>
+            </div>
+            <!-- Image carousel thing -->
+            <div class="swiper s2">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/images/metalworking/MarshmallowStick.jpg"></div>
+                <div class="swiper-slide"><img src="/images/metalworking/NutCracker.jpg"></div>
+                <div class="swiper-slide"><img src="/images/metalworking/BrassTag.jpg"></div>
+                <div class="swiper-slide"><img src="/images/metalworking/KnifeBlock.jpg"></div>
+                <div class="swiper-slide"><img src="/images/metalworking/Leaves.jpg"></div>
+                <div class="swiper-slide"><img src="/images/metalworking/AlumEngraving.jpg"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <script>
+                const swiper2 = new Swiper('.s2', {slidesPerView: 5, spaceBetween: 30, navigation: {nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev"},});
+            </script>
+            <!-- end of section, copy paste from "first main picture bar" to add more-->
+
+            <!-- third main picture bar -->
+            <div class="img-box">
+                <!-- Focus image -->
+                <img class="img" src="/images/other/SlateInlay.jpg">
+                <!-- side text -->
+                <p class="img-text">
+                    <h2>Other</h2>
+                    other section
+                </p>
+            </div>
+            <!-- Image carousel thing -->
+            <div class="swiper s3">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/images/other/BoxAndPoker.jpg"></div>
+                <div class="swiper-slide"><img src="/images/other/Knife.jpg"></div>
+                <div class="swiper-slide"><img src="/images/other/Boat.jpg"></div>
+                <div class="swiper-slide"><img src="/images/other/Sign.jpg"></div>
+                <div class="swiper-slide"><img src="/images/other/Stall.jpg"></div>
+                <div class="swiper-slide"><img src="/images/other/HeadphonesHolder.jpg"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <script>
+                const swiper3 = new Swiper('.s3', {slidesPerView: 5, spaceBetween: 30, navigation: {nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev"},});
+            </script>
+            <!-- end of section, copy paste from "first main picture bar" to add more-->
         </div>
+
+        <footer style="margin:50px;"></footer>
     </div>
 </body>
 </html>

@@ -1,1 +1,1 @@
-This is a redo of the original site since it got lost somehow, sadge.
+This is the website for my buisness.
