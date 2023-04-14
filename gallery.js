@@ -18,7 +18,7 @@ function Loadimgs() {
     for (let i = 0; i < files.length; i++) {
         var img = document.createElement('img');
         img.src = files[i];
-        img.width = 200;
+        img.height = 256;
         img.loading = "lazy";
         image_div.appendChild(img);
     }
