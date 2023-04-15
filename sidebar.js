@@ -53,11 +53,13 @@ function toggleNav() {
             sidenav.style.width = String(sbClosedWidth) + "px";
             main.style.marginLeft = String(sbClosedWidth) + "px";
             links.style.left = "-" + String(sbOpenWidth/2) + "px";
-            document.body.style.backgroundColor = "#ADD1F7";
+            // document.body.style.backgroundColor = "#ADD1F7";
+            document.getElementById('blackout').style.display = 'none';
         } else { //open if is collapsed or on error
             sidenav.style.width = String(sbOpenWidth) + "px";
             main.style.marginLeft = String(sbOpenWidth) + "px";
             links.style.left = String(sbClosedWidth) + "px";
-            document.body.style.backgroundColor = "#596C80";
+            // document.body.style.backgroundColor = "#596C80";
+            document.getElementById('blackout').style.display = 'block';
         } 
 }

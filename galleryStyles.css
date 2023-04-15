@@ -1,11 +1,12 @@
 body {
     background-color: #add1f7;
     margin: 0px;
+    font-size: 20px;
 }
 
 .img-box {
     background-color: #7D97B3;
-    height: 300px;
+    height: 300px; /* The height of the bar */
     width: 100%;
     float: left;
     margin-top: 30px;
@@ -13,7 +14,7 @@ body {
 
 .img {
     float: left;
-    height:250px;
+    height:250px; /* The height of the image */
     margin: 25px;
 }
 
@@ -26,7 +27,7 @@ body {
 
 .swiper {
   width: 100%;
-  height: 300px;
+  height: 300px; /* The height of the boxes for the scrolling images */
 }
 
 .swiper-slide {
@@ -40,7 +41,7 @@ body {
 
 .swiper-slide img {
   text-align:center;
-  height: 250px;
+  height: 200px; /* The height of the images */
   object-fit: cover;
   margin-top: 10px;
 }
