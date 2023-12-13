@@ -41,8 +41,11 @@ body {
 
 .swiper-slide img {
   text-align:center;
-  height: 200px; /* The height of the images */
-  object-fit: cover;
+  width: 90%;
+  max-height: 200px;
+  display: block;
+  object-fit: contain;
+  margin: auto;
   margin-top: 10px;
 }
 
@@ -51,7 +54,7 @@ body {
 
 /* Style the Image Used to Trigger the Modal */
 #ClickableImg {
-  border-radius: 5px;
+  border-radius: 0px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -62,7 +65,7 @@ body {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -77,8 +80,11 @@ body {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  /* width: 80%; */
+  /* max-width: 500px; */
+  max-height: 80%;
+  z-index: 10;
+  position: relative;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -110,7 +116,7 @@ body {
   top: 15px;
   right: 35px;
   color: #f1f1f1;
-  font-size: 40px;
+  font-size: 80px;
   font-weight: bold;
   transition: 0.3s;
 }
