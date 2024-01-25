@@ -134,3 +134,29 @@ body {
     width: 100%;
   }
 }
+
+.image-container {
+  text-align: center;
+  background: #7D97B3;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.image-container img {
+  text-align:center;
+  width: 90%;
+  max-height: 300px;
+  display: block;
+  object-fit: contain;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.image-container-container {
+  width: 100%;
+  background: #7D97B3;
+  display: flex;
+}
